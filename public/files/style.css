@@ -1,0 +1,172 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+/* body {
+	margin:40px auto;
+    background: url(/test/background.jpg) no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 100%;
+    background-attachment: fixed;
+	background-color: black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: white;
+	width: 600px;
+	min-width: 800px;
+    width: 95%;
+	overflow-y: scroll;
+} */
+p {
+	margin: 15px 0;
+	font-size: 18px;
+	line-height: 20px;
+    color: white;
+	font-weight: bold;
+}
+
+.gg {
+	color: #ff9822
+}
+
+strong{
+    color: #af1f1f;
+}
+
+a {
+	font-size: 18px;
+}
+a:link 
+{
+    color: #af1f1f;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited 
+{
+    color: #af1f1f;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #af1f1f;
+    background: rgba(255,255,255, 0.90);
+	text-decoration: none;
+}
+
+/* tabs */
+div.panes div {
+	display: none;
+	background-color: black;
+	border: 1px solid white;
+	font-size: 18px;
+	padding: 25px;
+    background: rgba(0,0,0, 0.65);
+}
+
+/* root element for tabs */
+ul.tabs { 
+	list-style: none;
+	height:28px;
+    background-color: rgba(0,0,0, 0.20);;
+}
+
+/* single tab */
+ul.tabs li { 
+	float: left;
+}
+
+ul.tabs a { 
+	color: white;
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;	
+	text-decoration: none;
+}
+
+ul.tabs a:hover {
+	color: darkmagenta;
+    background: 7A7A7A;
+}
+
+/* active tab uses a class name "current" */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    color: #af1f1f;
+}
+
+/* table */
+#cmd td {
+	font-size: 18px;
+    border: solid white 1px;
+	line-height: 20px;
+	padding: 5px 10px;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.7);
+	table-layout: fixed;
+}
+
+.chat {
+	font-size: 18px;
+    color: #61c72e;
+	font-weight: bold;
+	width: 120px;
+	font-size: 110%;
+}
+
+.chat2 {
+	font-size: 18px;
+    color: #af1f1f;
+	font-weight: bold;
+	width: 120px;
+	font-size: 115%;
+}
+
+.chat3 {
+	font-size: 18px;
+    color: #12b6cc;
+	font-weight: bold;
+	width: 120px;
+	font-size: 115%;
+}
+
+.rules {
+	margin-left: 25px; 
+}
+
+.rules li {
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.watch {
+	color: blue;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 40px; 
+}
+
+/*РњРѕР№ С„СЂРµР№Рј*/
+iframe{
+    width: 100%;
+    height: 200%;
+}
+
+#fr{
+   width: 100%; 
+    margin: 0; 
+    padding: 0;
+    min-height: 600px;
+    max-height: 1000 px;
+    overflow:hidden;
+}
+
+
+/* Добавляем стиль только для строки с флагом России */
+p.flag-russia {
+	font-size: 32px; /* Измените размер шрифта по вашему усмотрению */
+}

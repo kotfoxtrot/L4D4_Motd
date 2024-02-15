@@ -1,0 +1,391 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Moth</title>
+
+    <link rel="stylesheet" type="text/css" href="/files/style.css"/>
+    <script src="/files/jquery-1.9.1.min.js"></script>
+    <script src="/files/jquery-tabs.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Verdana";
+            src: url("/files/Verdana.ttf") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            zoom: 1.1;
+            margin: 40px auto;
+            background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: 100%;
+            background-attachment: fixed;
+            background-color: black;
+            font-family: "Verdana", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            width: 600px;
+            min-width: 800px;
+            width: 95%;
+            overflow-y: scroll;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            // Add a click handler only for links with the "redirect-link" class
+            $(".redirect-link").click(function (e) {
+                e.preventDefault(); // Prevent the default link behavior (navigation)
+
+                // Get the value of the href attribute of the clicked link
+                const targetUrl = $(this).attr("href");
+
+                // Redirect to the target URL
+                window.location.href = targetUrl;
+            });
+
+            // Initialize the tab plugin
+            $("ul.tabs").tabs("div.panes > div");
+        });
+    </script>
+
+</head>
+
+<body>
+<ul class="tabs">
+    <li><a href="" class="current">ENG ▼</a></li>
+    <li><a href="" class="">F.A.Q.</a></li>
+    <li><a href="" class="">VIP/PREM</a></li>
+    <li>
+        <a href="/motd/<%= server.ID %>/ru" class="redirect-link">RU ➤</a>
+    </li>
+</ul>
+
+<!-- tab "panes" -->
+<div class="panes">
+    <!-- EN -->
+    <div style="display: block">
+        <p align="center" class="flag-russia">
+            <strong> <%= server.NAME %> </strong>
+        </p>
+        <p align="center" class="flag-russia">
+            <strong class="gg"> <%= server.IP %>:<%= server.PORT %> </strong>
+        </p>
+        <br/>
+        <p><%= server.WelcomeEn %></p>
+        <br/>
+        <p>
+            The <strong>Endurance</strong> servers contain a large number of
+            additions<strong>:</strong> <%= server.FeaturesEn %>
+        </p>
+        <p>
+            To add more competition on the server, we have installed
+            <strong>Statistics:</strong> <span class="gg">l4d4.com</span>
+        </p>
+        <p>
+            We provide a <strong>new experience and opportunities</strong> in our
+            beloved game <3
+        </p>
+        <br/>
+        <p>
+            You can learn more about the perks in our WIKI at
+            <span class="gg">wiki.l4d4.com</span>
+        </p>
+        <br/>
+        <p align="left" class="flag-russia">Commands</p>
+        <table id="cmd" cellspacing="1" cellpadding="1">
+            <tbody>
+            <tr>
+                <td class="chat">!perks</td>
+                <td>Choose perks</td>
+            </tr>
+            <tr>
+                <td class="chat2">!w</td>
+                <td>Purchase weapons (<strong>PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!dt</td>
+                <td>Transfer the tank</td>
+            </tr>
+            <tr>
+                <td class="chat2">!vip</td>
+                <td>Access the VIP menu (<strong>VIP</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">!prem</td>
+                <td>Access the PREM menu (<strong>PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!afk</td>
+                <td>Go AFK</td>
+            </tr>
+            <tr>
+                <td class="chat">!js</td>
+                <td>Switch to survivors</td>
+            </tr>
+            <tr>
+                <td class="chat">!ji</td>
+                <td>Switch to infected</td>
+            </tr>
+            <tr>
+                <td class="chat2">!hats</td>
+                <td>Choose a hat (<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">R</td>
+                <td>Ghost Flight (<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">!sp</td>
+                <td>Sound effects pack (<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!kill</td>
+                <td>Suicide (for the weak-hearted)</td>
+            </tr>
+            <tr>
+                <td class="chat">!light</td>
+                <td>Illuminate for survivors</td>
+            </tr>
+            <tr>
+                <td class="chat">!coins</td>
+                <td>Show Edcoins balance</td>
+            </tr>
+            <tr>
+                <td class="chat">!mapvote</td>
+                <td>Choose the next campaign on the last maps</td>
+            </tr>
+            <tr>
+                <td class="chat2">Anti-kick</td>
+                <td>(<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!rank</td>
+                <td>Check your rank</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            The server has a special rating system that determines the best
+            survivor and infected of the round.
+        </p>
+        <p>
+            The best players of the round receive <strong>VIP</strong> for the
+            next round!
+        </p>
+    </div>
+    <!-- F.A.Q. -->
+    <div style="display: none">
+        <p align="center" class="flag-russia">
+            <strong>Frequently Asked Questions</strong>
+        </p>
+        <h3><strong>Collapse</strong></h3>
+        <p>
+            When survivors reach the safe room, a timer
+            <a class="gg">1:00</a> starts. During the collapse, infected can open
+            the safe room door.
+        </p>
+        <br/>
+        <h3><strong>Perk Negative Effects:</strong></h3>
+        <p>
+            <strong class="chat">Slowdown</strong> - Reduces your speed by
+            <a class="gg">12%</a>. Stacks. Removed after healing or getting hurt.
+        </p>
+        <p>
+            <strong class="chat">Vulnerability</strong> - Increases damage taken
+            by <a class="gg">50%</a>. Removed after healing or getting hurt.
+        </p>
+        <p>
+            <strong class="chat">Poisoning</strong> - Constant health is converted
+            to temporary health under this effect.
+        </p>
+        <p>
+            <strong class="chat">Fatigue</strong> - Nullifies the bonuses of the
+            "Rush" effect and prevents the use of certain perks, such as
+            "Sprinter".
+        </p>
+        <p>
+            <strong class="chat">Deep Wound</strong> - When the timer expires, you
+            will be <a class=" ">downed</a>. The timer is reset by healing with a
+            first-aid kit. <br/>
+        </p>
+
+        <hr/>
+        <br/>
+        <h3><strong>Perk Positive Effects:</strong></h3>
+        <p>
+            <strong class="chat3">Tenacity</strong> - Reduces incoming damage from
+            enemies by <a class="gg">50%</a>
+        </p>
+        <p>
+          <strong class="chat3">Rush</strong> - Increased movement speed.</p>
+        <p>
+            <strong class="chat3">Resilience</strong> - While this effect is
+            active, you <a class="gg">will not be downed</a>. Instead, the
+            <a class="chat">Deep Wound</a> effect will be applied to you for
+            <a class="gg">45 seconds</a>. Removed after healing.
+        </p>
+    </div>
+
+    <!-- VIP/PREM -->
+    <div style="display: none">
+        <p align="center" class="flag-russia">
+            <strong class="gg">Support the Server</strong>
+        </p>
+        <p>
+            By supporting the project on Boosty, you will get
+            <strong>unique opportunities</strong> and <strong>nice perks</strong>
+        </p>
+        <p>
+            <strong class="gg">https://boosty.to/endurancel4d2</strong> or short
+            link: <strong class="gg">b.l4d4.com</strong>
+        </p>
+
+        <br/><br/>
+        <hr/>
+        <br/>
+        <table id="cmd" cellspacing="1" cellpadding="4">
+            <tbody>
+            <tr>
+                <td class="chat">Benefits</td>
+                <td>Player</td>
+                <td>VIP</td>
+                <td>PREM</td>
+                <td>LEGEND</td>
+            </tr>
+            <tr>
+                <td>No penalties for ragequitting</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Ability to wear hats</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Kick protection:</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Ghost Flight</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Access to VIP soundpad</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Free basic weapon set</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Visual player indication</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Preserve chosen perks when leaving the game</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Weapon token on weapon purchase</td>
+                <td></td>
+                <td align="center">1</td>
+                <td align="center">3</td>
+                <td align="center">4</td>
+            </tr>
+            <tr>
+                <td>Access to PREMIUM soundpad</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Free access to PREMIUM player category</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Ability to launch fireworks</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Custom welcome message displayed upon joining the server</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>EdCoins x1.5 Booster</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Access to LEGEND soundpad</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Free access to LEGEND player category</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>LEGEND users have a model that changes color</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- @end .panes -->
+<script>
+    $(function () {
+        $("ul.tabs").tabs("div.panes > div");
+    });
+</script>
+</body>
+</html>

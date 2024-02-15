@@ -1,0 +1,391 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Moth</title>
+
+    <link rel="stylesheet" type="text/css" href="/files/style.css"/>
+    <script src="/files/jquery-1.9.1.min.js"></script>
+    <script src="/files/jquery-tabs.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Verdana";
+            src: url("/files/Verdana.ttf") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            zoom: 1.1;
+            margin: 40px auto;
+            background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: 100%;
+            background-attachment: fixed;
+            background-color: black;
+            font-family: "Verdana", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            width: 600px;
+            min-width: 800px;
+            width: 95%;
+            overflow-y: scroll;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            // Добавьте обработчик клика только для ссылки с классом "redirect-link"
+            $(".redirect-link").click(function (e) {
+                e.preventDefault(); // Предотвратите стандартное поведение ссылки (переход по ссылке)
+
+                // Получите значение атрибута href кликнутой ссылки
+                const targetUrl = $(this).attr("href");
+
+                // Перенаправить на целевой URL
+                window.location.href = targetUrl;
+            });
+
+            // Инициализируйте плагин вкладок
+            $("ul.tabs").tabs("div.panes > div");
+        });
+    </script>
+</head>
+
+<body>
+<ul class="tabs">
+    <li><a href="" class="current">RU ▼</a></li>
+    <li><a href="" class="">F.A.Q.</a></li>
+    <li><a href="" class="">VIP/PREM</a></li>
+    <li>
+        <a href="/motd/<%= server.ID %>/en" class="redirect-link">ENG ➤</a>
+    </li>
+</ul>
+
+<!-- tab "panes" -->
+<div class="panes">
+    <!-- RU -->
+    <div style="display: block">
+        <p align="center" class="flag-russia">
+            <strong> <%= server.NAME %> </strong>
+        </p>
+        <p align="center" class="flag-russia">
+            <strong class="gg"> <%= server.IP %>:<%= server.PORT %> </strong>
+        </p>
+        <br/>
+        <p><%= server.WelcomeRu %></p>
+        <br/>
+        <p>
+            Сервера <strong>Endurance</strong> вместили в себе большое количество
+            дополнений<strong>:</strong> <%= server.FeaturesRu %>
+        </p>
+        <p>
+            Чтобы внести дополнительного соперничиства на сервере установленна
+            <strong>Статистика:</strong> <span class="gg">l4d4.com</span>
+        </p>
+        <p>
+            Мы предоставляем <strong>новый опыт и возможности</strong> в
+            полюбившейся нам игре <3
+        </p>
+        <br/>
+        <p>
+            Более подробно с перками вы можете ознакомиться в нашей WIKI
+            <span class="gg">wiki.l4d4.com</span>
+        </p>
+        <br/>
+        <p align="left" class="flag-russia">Команды</p>
+        <table id="cmd" cellspacing="1" cellpadding="1">
+            <tbody>
+            <tr>
+                <td class="chat">!perks</td>
+                <td>Выбор перков</td>
+            </tr>
+            <tr>
+                <td class="chat2">!w</td>
+                <td>Покупка оружия (<strong>PREM</strong>)</td>
+            </tr>
+
+            <tr>
+                <td class="chat">!dt</td>
+                <td>Передать танка</td>
+            </tr>
+            <tr>
+                <td class="chat2">!vip</td>
+                <td>Для доступа в вип меню(<strong>VIP</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">!prem</td>
+                <td>Для доступа в прем меню(<strong>PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!afk</td>
+                <td>Уйти в afk</td>
+            </tr>
+            <tr>
+                <td class="chat">!js</td>
+                <td>Перейти за выживших</td>
+            </tr>
+            <tr>
+                <td class="chat">!ji</td>
+                <td>Перейти за зараженных</td>
+            </tr>
+            <tr>
+                <td class="chat2">!hats</td>
+                <td>Выбор шляпы(<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">R</td>
+                <td>Полёт призраком(<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat2">!sp</td>
+                <td>Набор звуковых эффектов(<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!kill</td>
+                <td>Суицид(для слабоморальных)</td>
+            </tr>
+            <tr>
+                <td class="chat">!light</td>
+                <td>Подсветка для выживших</td>
+            </tr>
+            <tr>
+                <td class="chat">!coins</td>
+                <td>Показать баланс Edcoins</td>
+            </tr>
+            <tr>
+                <td class="chat">!mapvote</td>
+                <td>Выбор следующей кампании на последних картах</td>
+            </tr>
+            <tr>
+                <td class="chat2">Анти-кик</td>
+                <td>(<strong>VIP/PREM</strong>)</td>
+            </tr>
+            <tr>
+                <td class="chat">!rank</td>
+                <td>Посмотреть свой ранг</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            На сервере действует особая система рейтинга, которая определяет
+            лучшего выжившего и зараженного раунда.
+        </p>
+        <p>
+            Лучшие игроки раунда получают <strong>VIP</strong> на следующий раунд!
+        </p>
+    </div>
+    <!-- F.A.Q. -->
+    <div style="display: none">
+        <p align="center" class="flag-russia">
+            <strong>Часто задаваемые вопросы</strong>
+        </p>
+        <h3><strong>Коллапс</strong></h3>
+        <p>
+            Когда выжившие доходят до убежища, запускается таймер
+            <a class="gg">1:00</a> во время коллапса зараженные могут открыть
+            дверь убежища.
+        </p>
+        <br/>
+        <h3><strong>Эффекты перков отрицательные:</strong></h3>
+        <p>
+            <strong class="chat">Замедление</strong> - Ваша скорость уменьшается
+            на <a class="gg">12%</a>. Стакается. Снимается после лечения или
+            ранения.
+        </p>
+        <p>
+            <strong class="chat">Уязвимость</strong> - Урон по вам увеличен на
+            <a class="gg">50%</a>. Снимается после лечения или ранения.
+        </p>
+        <p>
+            <strong class="chat">Отравление</strong> - Постоянное здоровье под
+            этим эффектом переходит во временное.
+        </p>
+        <p>
+            <strong class="chat">Усталость</strong> - Обнуляет бонусы эффекта
+            "Спешка" и не позволяет использовать некоторые перке, такие как
+            “Спринтер”.
+        </p>
+        <p>
+            <strong class="chat">Глубокая Рана</strong> - При истечении таймера вы
+            будете <a class=" ">выведены из строя</a>. Таймер сбрасывается
+            лечением аптечкой. <br/>
+        </p>
+
+        <hr/>
+        <br/>
+        <h3><strong>Эффекты перков положительные:</strong></h3>
+        <p>
+            <strong class="chat3">Упорство</strong> - Уменьшает входящий урон от
+            противников на <a class="gg">50%</a>
+        </p>
+        <p>
+            <strong class="chat3">Спешка</strong> - Увеличение скорости передвижения. </p>
+        <p>
+            <strong class="chat3">Стойкость</strong> - Пока действует эффект, Вы
+            <a class="gg">не будете выведены из строя</a>. Вместо этого на Вас
+            будет наложен эффект <a class="chat">Глубокая рана</a> на
+            <a class="gg"> 45 секунд</a>. Снимается после лечения.
+        </p>
+    </div>
+
+    <!-- VIP/PREM -->
+    <div style="display: none">
+        <p align="center" class="flag-russia">
+            <strong class="gg">Поддержать сервер</strong>
+        </p>
+        <p>
+            Вы получите <strong>уникальные возможности</strong> и
+            <strong>приятные плюшки</strong> поддержав проект на Boosty
+        </p>
+        <p>
+            <strong class="gg">https://boosty.to/endurancel4d2</strong> или
+            короткая ссылка: <strong class="gg">b.l4d4.com</strong>
+        </p>
+
+        <br/><br/>
+        <hr/>
+        <br/>
+        <table id="cmd" cellspacing="1" cellpadding="4">
+            <tbody>
+            <tr>
+                <td class="chat">Преимущества</td>
+                <td>Игрок</td>
+                <td>VIP</td>
+                <td>PREM</td>
+                <td>LEGEND</td>
+            </tr>
+            <tr>
+                <td>Отсутствие штрафов за ragequit</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Возможность надеть шапку</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Защита от кика:</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Полёт призраком</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Доступ к VIP саундпаду</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Бесплатный базовый набор оружия</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Визуальное обозначение игрока</td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Сохранение выбранных перков при выходе из игры</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Оружейный жетон при покупке оружия</td>
+                <td></td>
+                <td align="center">1</td>
+                <td align="center">3</td>
+                <td align="center">4</td>
+            </tr>
+            <tr>
+                <td>Доступ к PREMIUM саундпаду</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Бесплатный доступ к PREMIUM категории проигрывателя</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Возможность запустить салют</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td> Своя приветственная фраза, которая отображаться при входе на сервер</td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Бустер x1.5 EdCoins</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Доступ к LEGEND саундпаду</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>Бесплатный доступ к LEGEND категории проигрывателя</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            <tr>
+                <td>LEGEND пользователи имеют модель, которая меняет цвет</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align="center">✔</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- @end .panes -->
+<script>
+    $(function () {
+        $("ul.tabs").tabs("div.panes > div");
+    });
+</script>
+</body>
+</html>
