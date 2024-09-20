@@ -89,6 +89,20 @@
 				"NAME": "Vortex | Classic 2",
 				"IP": "185.130.251.131",
 				"PORT": "28122"
+			},
+			{
+				"ID": "th1",
+				"MODE": "t1hard",
+				"NAME": "Vortex | T1 Hard [1]",
+				"IP": "185.130.251.131",
+				"PORT": "28211"
+			},
+			{
+				"ID": "th2",
+				"MODE": "t1hard",
+				"NAME": "Vortex | T1 Hard [2]",
+				"IP": "185.130.251.131",
+				"PORT": "28222"
 			}
 		]
 	}

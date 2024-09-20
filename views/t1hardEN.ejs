@@ -38,36 +38,36 @@
 
 	<script>
 		$(function () {
-			// Add a click handler only for links with the "redirect-link" class
+			// Добавьте обработчик клика только для ссылки с классом "redirect-link"
 			$(".redirect-link").click(function (e) {
-				e.preventDefault(); // Prevent the default link behavior (navigation)
+				e.preventDefault(); // Предотвратите стандартное поведение ссылки (переход по ссылке)
 
-				// Get the value of the href attribute of the clicked link
+				// Получите значение атрибута href кликнутой ссылки
 				const targetUrl = $(this).attr("href");
 
-				// Redirect to the target URL
+				// Перенаправить на целевой URL
 				window.location.href = targetUrl;
 			});
 
-			// Initialize the tab plugin
+			// Инициализируйте плагин вкладок
 			$("ul.tabs").tabs("div.panes > div");
 		});
 	</script>
-
 </head>
 
 <body>
-<ul class="tabs">
-	<li><a href="" class="current">Main</a></li>
-	<li><a href="" class="">Privileges</a></li>
-	<li>
-		<a href="/motd/<%= server.ID %>/ru" class="redirect-link">RU версия ➤</a>
-	</li>
-</ul>
+	<ul class="tabs">
+		<li><a href="" class="current">Main</a></li>
+		<li><a href="" class="">Information</a></li>
+		<li><a href="" class="">Privileges</a></li>
+		<li>
+			<a href="/motd/<%= server.ID %>/ru" class="redirect-link">RU версия ➤</a>
+		</li>
+	</ul>
 
 <!-- tab "panes" -->
 <div class="panes">
-	<!-- EN -->
+	<!-- RU -->
 	<div style="display: block">
 		<p align="center" class="flag-russia">
 			<strong> <%= server.NAME %> </strong>
@@ -77,25 +77,21 @@
 		</p>
 		<br/>
 		<p>
-			Welcome to Vortex COOP with custom maps!
+			Are you an experienced player who has seen it all? Welcome to Vortex T1 Hard!
 		</p>
 		<p>
-			The main focus of the server is special abilities, perks. Why not play COOP with them?
+			Here, we’ve tried to take a fresh look at T1—welcome to the experimental section!
 		</p>
 		<p>
-			You can find out about all special maps from the Steam group, just enter !steam to the chat <3
-		</p>
+			You can read about the features in the "Information" tab. Enjoy the game <3
+		</p>				
 		<p>
-		   [ <strong class="gg">Monitoring and bans</strong> vortexl4d4.ru | <strong class="gg">Community</strong> !discord | <strong class="gg">Steam group</strong> !steam ]
+			[ <strong class="gg">Website</strong> vortexl4d4.ru | <strong class="gg">Community</strong> !discord | <strong class="gg">Steam group</strong> !steam ]
 		</p>
 		<br/>
 		<p align="left" class="flag-russia">Server Commands:</p>
 		<table id="cmd" cellspacing="1" cellpadding="1">
 			<tbody>
-			<tr>
-				<td class="chat">!perks</td>
-				<td>Choose perks (special abilities)</td>
-			</tr>
 			<tr>
 				<td class="chat">!w or !shop</td>
 				<td>Purchase weapons with coins</td>
@@ -109,16 +105,28 @@
 				<td>Share coins with another player</td>
 			</tr>
 			<tr>
+				<td class="chat">!pass</td>
+				<td>Pass a Tank to another player</td>
+			</tr>
+			<tr>
+				<td class="chat">!js</td>
+				<td>Switch to survivors</td>
+			</tr>
+			<tr>
+				<td class="chat">!ji</td>
+				<td>Switch to infected</td>
+			</tr>
+			<tr>
+				<td class="chat">!afk</td>
+				<td>Switch to spectators</td>
+			</tr>
+			<tr>
 				<td class="gg">!sp</td>
 				<td>Sound effects pack for Premium/Legend</td>
 			</tr>
-			<tr>
+			<tr></tr>
 				<td class="gg">!hat</td>
 				<td>Collection of hats for Legend</strong></td>
-			</tr>
-			<tr>
-				<td class="chat">!kill</td>
-				<td>To choose the easy way out</td>
 			</tr>
 			<tr>
 				<td class="chat">!votemap</td>
@@ -126,6 +134,36 @@
 			</tr>
 			</tbody>
 		</table>
+		<p>
+			The server has a special rating system that determines the best survivor and infected player of the round!
+		</p>
+	</div>
+
+	<!-- F.A.Q. -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			Main Information
+		</p>
+		<h3><strong class="gg">Maps Rework</strong></h3>
+		<p>
+			New spawn locations and paths on familiar maps!
+		</p>
+		<br/>
+		<h3><strong class="gg">Weapon Shop</strong></h3>
+		<p>
+			Weapons can be purchased with Coins that are awarded for good gameplay!
+		</p>
+		<p>
+			However, weapon spawns are not reduced, so you can still find them on the map...
+		</p>
+		<br/>
+		<h3><strong class="gg">Soundpad and Jukebox</strong></h3>
+		<p>
+			If you hear strange sounds or music, it's just the boosters having fun xD
+		</p>
+		<p>
+			On our server, you can play music in the safe room and use special meme sounds.
+		</p>
 	</div>
 
 	<!-- VIP/PREM -->
@@ -137,8 +175,8 @@
 			If you like the project, you can support its development on the Boosty platform!
 		</p>
 		<p>
-			You can also purchase privileges there! On the COOP server, they include:
-		</p>
+			You can also purchase privileges there! On the T1 Hard server, they include:
+		</p>		
 		<br/>
 		<hr/>
 		<br/>
@@ -149,12 +187,6 @@
 				<td>VIP</td>
 				<td>PREMIUM</td>
 				<td>LEGENDARY</td>
-			</tr>
-			<tr>
-				<td>Ghost Flight</td>
-				<td align="center">✔</td>
-				<td align="center">✔</td>
-				<td align="center">✔</td>
 			</tr>
 			<tr>
 				<td>Kick Protection:</td>
@@ -182,12 +214,6 @@
 			</tr>
 			<tr>
 				<td>Access to meme soundpad</td>
-				<td></td>
-				<td align="center">✔</td>
-				<td align="center">✔</td>
-			</tr>
-			<tr>
-				<td>Perks saved when leaving the game</td>
 				<td></td>
 				<td align="center">✔</td>
 				<td align="center">✔</td>
