@@ -1,0 +1,319 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Vortex Left4Dead2 Motd</title>
+
+	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
+	<script src="/files/jquery-1.9.1.min.js"></script>
+	<script src="/files/jquery-tabs.js"></script>
+
+	<style>
+		@font-face {
+			font-family: "Verdana";
+			src: url("/files/Verdana.ttf") format("woff2");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			zoom: 1.1;
+			margin: 40px auto;
+			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: 100%;
+			background-attachment: fixed;
+			background-color: black;
+			font-family: "Verdana", Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			color: white;
+			width: 600px;
+			min-width: 800px;
+			width: 95%;
+			overflow-y: scroll;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			// Добавьте обработчик клика только для ссылки с классом "redirect-link"
+			$(".redirect-link").click(function (e) {
+				e.preventDefault(); // Предотвратите стандартное поведение ссылки (переход по ссылке)
+
+				// Получите значение атрибута href кликнутой ссылки
+				const targetUrl = $(this).attr("href");
+
+				// Перенаправить на целевой URL
+				window.location.href = targetUrl;
+			});
+
+			// Инициализируйте плагин вкладок
+			$("ul.tabs").tabs("div.panes > div");
+		});
+	</script>
+</head>
+
+<body>
+<ul class="tabs">
+	<li><a href="" class="current">Главная</a></li>
+	<li><a href="" class="">Информация</a></li>
+	<li><a href="" class="">Привилегии</a></li>
+	<li>
+		<a href="/motd/<%= server.ID %>/en" class="redirect-link">ENG version ➤</a>
+	</li>
+</ul>
+
+<!-- tab "panes" -->
+<div class="panes">
+	<!-- RU -->
+	<div style="display: block">
+		<p align="center" class="flag-russia">
+			<strong> <%= server.NAME %> </strong>
+		</p>
+		<p align="center" class="flag-russia">
+			<%= server.IP %>:<%= server.PORT %>
+		</p>
+		<br/>
+		<p>
+			Если вы здесь, значит пора погрузиться в новое измерение Vortex Perkmod!
+		</p>
+		<p>
+			Это не просто модификация и напичканый модами сервер, это наша общая страсть, воплощенная в игре.
+		</p>
+		<p>
+			Мы создали Vortex, чтобы подарить незабываемые эмоции и новый взгляд на любимую игру себе и вам <3
+		</p>
+		<p>
+		   [ <strong class="gg">Сайт</strong> vortexl4d4.ru | <strong class="gg">Сообщество</strong> !discord | <strong class="gg">Steam-группа</strong> !steam ]
+		</p>
+
+		<!-- 		
+		<p>
+			[ <a href="http://vortexl4d4.ru/" target="_blank"><strong class="gg">Мониторинг и баны</strong></a> 
+			| <a href="http://discord.gg/MXHPFHwRm5" target="_blank"><strong class="gg">Сообщество Discord</strong></a> 
+			| <a href="http://steamcommunity.com/groups/vortexl4d4" target="_blank"><strong class="gg">Steam-группа</strong></a> ]
+		 </p> 
+		 -->
+		
+		<br/>
+		<p align="left" class="flag-russia">Команды сервера:</p>
+		<table id="cmd" cellspacing="1" cellpadding="1">
+			<tbody>
+			<tr>
+				<td class="chat">!perks</td>
+				<td>Выбор перков (специальных навыков)</td>
+			</tr>
+			<tr>
+				<td class="chat">!w</td>
+				<td>Покупка оружия за коины</td>
+			</tr>
+			<tr>
+				<td class="chat">!coins</td>
+				<td>Текущий баланс</td>
+			</tr>
+			<tr>
+				<td class="chat">!tip</td>
+				<td>Поделиться коинами с игроком</td>
+			</tr>
+			<tr>
+				<td class="chat">!pass</td>
+				<td>Передать танка другому игроку</td>
+			</tr>
+			<tr>
+				<td class="chat">!js</td>
+				<td>Перейти за выживших</td>
+			</tr>
+			<tr>
+				<td class="chat">!ji</td>
+				<td>Перейти за зараженных</td>
+			</tr>
+			<tr>
+				<td class="chat">!afk</td>
+				<td>Перейти за наблюдателей</td>
+			</tr>
+			<tr>
+				<td class="gg">Кнопка R</td>
+				<td>Полёт призраком для VIP/Premium/Legend</td>
+			</tr>
+			<tr>
+				<td class="gg">!sp</td>
+				<td>Набор звуковых эффектов для Premium/Legend</strong></td>
+			</tr>
+			<tr></tr>
+				<td class="gg">!hat</td>
+				<td>Коллекция шапок для Legend</strong></td>
+			</tr>
+			<tr>
+				<td class="chat">!kill</td>
+				<td>Чтобы выбрать лёгкий путь</td>
+			</tr>
+			<tr>
+				<td class="chat">!votemap</td>
+				<td>Выбор следующей кампании</td>
+			</tr>
+			</tbody>
+		</table>
+		<p>
+			На сервере действует особая система рейтинга, которая определяет
+			лучшего выжившего и зараженного раунда!
+		</p>
+	</div>
+	<!-- F.A.Q. -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			Основная информация
+		</p>
+		<h3><strong class="gg">Перки - способности</strong></h3>
+		<p>
+			Каждому игроку на выбор доступен ряд способностей, почитать о которых можно через !perk
+		</p>
+		<p>
+			Сначала может быть немного трудно разобраться, но оно того стоит, админ обещает!
+		</p>
+		<br/>
+		<h3><strong class="gg">Коллапс Endgame</strong></h3>
+		<p>
+			Когда выжившие уже рядом с убежищем, военные начинают зачистку зоны вокруг него!
+		</p>
+		<p>
+			Стартует обратный отсчёт до бомбардировки - нужно успеть добежать до убежища и отбиться от орды!
+		</p>
+		<br/>
+		<h3><strong class="gg">Эффекты от перков:</strong></h3>
+		<p>
+			Перки могут накладывать <strong class="chat">Положительные</strong> и <strong>Отрицательные</strong> эффекты.
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+		<p>
+			<strong class="chat">Ярость</strong> - Все, кто наносят Вам урон, будут отлетать в сторону, а Ваши атаки ускорятся!
+		</p>
+		<p>
+			<strong class="chat">Упорство</strong> - Уменьшает входящий урон от противников на определённый процент.
+		</p>
+		<p>
+			<strong class="chat">Спешка</strong> - Увеличение скорости передвижения на определённый процент. </p>
+		<p>
+			<strong class="chat">Стойкость</strong> - Этот эффект может спасти от выведения из строя.
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+		<p>
+			<strong>Замедление</strong> - Уменьшает скорость передвижения на определённый процент.
+		</p>
+		<p>
+			<strong>Уязвимость</strong> - Увеличивает наносимый вам урон. Снимается после лечения или ранения.
+		</p>
+		<p>
+			<strong>Отравление</strong> - Постоянное здоровье под этим эффектом переходит во временное.
+		</p>
+		<p>
+			<strong>Усталость</strong> - Не позволяет использовать некоторые перки, такие как “Спринтер”.
+		</p>
+		<p>
+			<strong>Глубокая Рана</strong> - От неё вы постепенно истекаете кровью и скоро упадёте, не зависимо от HP.
+		</p>
+	</div>
+
+	<!-- VIP/PREM -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			<strong class="gg">Поддержка сервера на Boosty!</strong>
+		</p>
+		<p>
+			Если Вам понравился проект, то Вы можете поддержать его дальнейшее развитие на платформе Boosty!
+		</p>
+		<p>
+			https://boosty.to/vortexl4d2
+		</p>
+		<br/>
+		<p>
+			Также на нём можно приобрести внутриигровые привилегии, которые дарят следующие плюшки:
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+		<table id="cmd" cellspacing="1" cellpadding="4">
+			<tbody>
+			<tr>
+				<td class="chat">Преимущества</td>
+				<td>VIP</td>
+				<td>PREMIUM</td>
+				<td>LEGENDARY</td>
+			</tr>
+			<tr>
+				<td>Полёт призраком</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Защита от кика:</td>
+				<td align="center">LVL-1</td>
+				<td align="center">LVL-2</td>
+				<td align="center">LVL-3</td>
+			</tr>
+			<tr>
+				<td>Коины каждого раунда</td>
+				<td align="center">500</td>
+				<td align="center">1000</td>
+				<td align="center">1500</td>
+			</tr>
+			<tr>
+				<td>Бустер Vortex коинов</td>
+				<td align="center">+25%</td>
+				<td align="center">+50%</td>
+				<td align="center">+100%</td>
+			</tr>
+			<tr>
+				<td>Визуальное обозначение в чате</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Доступ к мемному саундпаду</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Сохранение перков при выходе из игры</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr></tr>
+				<td>Возможность носит шапки</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Возможность добавить трек в Jukebox</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Новые возможности (в разработке)</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- @end .panes -->
+<script>
+	$(function () {
+		$("ul.tabs").tabs("div.panes > div");
+	});
+</script>
+</body>
+</html>

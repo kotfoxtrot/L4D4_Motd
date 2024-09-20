@@ -1,17 +1,10 @@
 version: '3.7'
-
 services:
   l4d4_motd:
     build:
       context: .
-    expose:
-      - 3040
+    ports:
+      - "3040:3040"
     restart: always
     volumes:
       - .:/app
-
-# docker network create -d bridge evilcorp
-networks:
-  default:
-    external: true
-    name: evilcorp

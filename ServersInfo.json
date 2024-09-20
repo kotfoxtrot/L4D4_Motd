@@ -1,168 +1,95 @@
 [
-  {
-    "type": "header",
-    "version": "5.2.1",
-    "comment": "Export to JSON plugin for PHPMyAdmin"
-  },
-  {
-    "type": "database",
-    "name": "endurance"
-  },
-  {
-    "type": "table",
-    "name": "ServersInfo",
-    "database": "endurance",
-    "data": [
-      {
-        "ID": "1",
-        "NAME": "Endurance|1 Perks",
-        "IP": "188.127.225.21",
-        "PORT": "27015",
-        "WelcomeRu": "Приветствуем на Endurance Perks - где необычные Перки и Механики игры столь удивительны, что будто бы мы собрали их случайным образом, закрыв глаза и крутя барабан! Погрузитесь в новый опыт игры, полный неожиданных и захватывающих возможностей~",
-        "WelcomeEn": "Welcome to Endurance Perks - where unusual game Perks and Mechanics are so astonishing that it's as if we gathered them randomly, closing our eyes and spinning the wheel! Immerse yourself in a new gaming experience, full of unexpected and thrilling possibilities~",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "2",
-        "NAME": "Endurance|2 Perks",
-        "IP": "188.127.225.21",
-        "PORT": "27016",
-        "WelcomeRu": "Добро пожаловать на Endurance Perks - где наши Перки и механики игры созданы с таким тонким чувством стиля, что даже сам Пикассо завидовал бы нашему хаотическому творчеству! Забудьте об устоявшихся правилах и логике, у нас каждый перк - настоящее произведение искусства",
-        "WelcomeEn": "Welcome to Endurance Perks - where our game Perks and mechanics are crafted with such a refined sense of style that even Picasso would envy our chaotic creativity! Forget about established rules and logic, here, every perk is a true work of art.",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "3",
-        "NAME": "Endurance|3 Perks",
-        "IP": "188.127.225.21",
-        "PORT": "27017",
-        "WelcomeRu": "Приветствуем на Endurance Perks - где наши \"случайно\" выбранные перки и механики игры обязательно вызовут у вас улыбку, или, возможно, искренний смех! Погружайтесь в новый опыт игры, полный неожиданных и веселых возможностей!",
-        "WelcomeEn": "Welcome to Endurance Perks - where our \"randomly\" assembled game perks and mechanics are sure to bring a smile to your face, or perhaps even genuine laughter! Immerse yourself in a new gaming experience, full of unexpected and amusing possibilities!",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "4",
-        "NAME": "Endurance| V\/S",
-        "IP": "188.127.225.21",
-        "PORT": "27018",
-        "WelcomeRu": "Добро пожаловать на Versus Survival - где вы столкнетесь с самой суровой, безжалостной и беспощадной битвой за выживание, а наши уникальные Механики и Перки делают этот опыт непредсказуемо захватывающим! Примите вызов и окунитесь в атмосферу, где только самые стойкие выживают, а остальные становятся ужином для...\n",
-        "WelcomeEn": "Welcome to Versus Survival - where you'll face the toughest, merciless, and ruthless battle for survival, and our unique Mechanics and Perks make this experience unpredictably thrilling! Accept the challenge and immerse yourself in an atmosphere where only the most resilient survive, while the rest become dinner for...",
-        "FeaturesRu": "Перки, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "5",
-        "NAME": "Endurance|Realism Perks",
-        "IP": "188.127.225.21",
-        "PORT": "27019",
-        "WelcomeRu": "Добро пожаловать в мир Realism - где игра становится настоящим испытанием для тех, кто ищет правдоподобный опыт. Подготовьтесь к потной ладони и волнительным моментам, ведь настоящее выживание - дело не для слабаков но Перки помогут в этом сражение",
-        "WelcomeEn": "Welcome to the world of Realism - where the game becomes a true challenge for those seeking a lifelike experience. Get ready for sweaty palms and thrilling moments, as real survival is not for the faint-hearted, but Perks will aid you in this battle.",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "6",
-        "NAME": "Endurance|T1 Hard",
-        "IP": "178.22.51.56",
-        "PORT": "22806",
-        "WelcomeRu": "Добро пожаловать в мир с T1 оружием первого уровня - где бои становятся настоящим вызовом даже для самых опытных игроков а мощь не превышает уровня начинающего пирожка. Потому что именно здесь виртуозность и тактика сделают вас настоящим мастером оружия!\nЧто может быть лучше, чем сражаться за выживших с горсткой патронов и ножом против армии живых мертвецов? Весело и увлекательно, правда? ;)\n",
-        "WelcomeEn": "Welcome to the world of T1 level weapons - where battles become a real challenge even for the most experienced players, and the power doesn't exceed that of a novice pastry. Because right here, virtuosity and tactics will make you a true master of weaponry!\n\nWhat could be better than fighting for survival with just a handful of bullets and a knife against an army of the undead? Fun and thrilling, isn't it? ;)",
-        "FeaturesRu": "PROMOD, Ивенты, Поинты, Ранги",
-        "FeaturesEn": "PROMOD, Events, Points, Ranks."
-      },
-      {
-        "ID": "7",
-        "NAME": "Endurance|ELITE",
-        "IP": "178.22.51.56",
-        "PORT": "22801",
-        "WelcomeRu": "Добро пожаловать на ELITE - где Перки превращают обыденный геймплей в уникальное приключение! Здесь каждый перк - это ключ к новым возможностям и силам, которые превратят вас в настоящую мясорубку! Приготовьтесь к увлекательному опыту игры, где ваше мастерство с перками станет секретным оружием для победы!",
-        "WelcomeEn": "Welcome to ELITE - where Perks turn ordinary gameplay into a unique adventure! Here, each perk is a key to new abilities and powers that will transform you into a true force to be reckoned with! Get ready for an exhilarating gaming experience where your mastery of perks becomes a secret weapon for victory!",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "8",
-        "NAME": "Endurance|Maps",
-        "IP": "178.22.51.56",
-        "PORT": "22802",
-        "WelcomeRu": "Добро пожаловать на Maps, кастомные карты с перками? Именно так! Смена кампании командой: !maps",
-        "WelcomeEn": "Welcome to Maps, custom maps with perks? That's right! Changing the campaign with the command: !maps",
-        "FeaturesRu": "Карты Мастерской, Перки, !maps",
-        "FeaturesEn": "Workshop Maps, Perks."
-      },
-      {
-        "ID": "9",
-        "NAME": "Endurance|Sky",
-        "IP": "178.22.51.56",
-        "PORT": "22803",
-        "WelcomeRu": "Добро пожаловать на SKY - там, где погода столь предсказуема, что вы никогда не узнаете, что ожидает вас на следующей карте! Ночь или день, туман или дождь - выбор погоды как в кармане! Однажды вы можете наслаждаться солнечным днем, а следующего - ловить капли дождя с мокрыми носками. Кто же хочет однообразия, когда у вас есть SKY и его прекрасно непредсказуемая погода!",
-        "WelcomeEn": "Welcome to SKY - where the weather is so unpredictable that you'll never know what awaits you on the next map! Night or day, fog or rain - weather choices in your pocket! One moment, you can enjoy a sunny day, and the next, you'll be catching raindrops with wet socks. Who wants monotony when you have SKY and its delightfully unpredictable weather!",
-        "FeaturesRu": "Погода, Перки, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Weather, Perks, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "10",
-        "NAME": "Endurance|Mutant",
-        "IP": "178.22.51.56",
-        "PORT": "22805",
-        "WelcomeRu": null,
-        "WelcomeEn": null,
-        "FeaturesRu": null,
-        "FeaturesEn": null
-      },
-      {
-        "ID": "11",
-        "NAME": "Endurance|Cup",
-        "IP": "178.22.51.56",
-        "PORT": "22811",
-        "WelcomeRu": "Добро пожаловать на наш сервер, где перки — это как специальные приправы в мире соревновательности. Здесь ты будешь наслаждаться уникальным опытом, как если бы играл в шахматы, но только с автоматами и гранатами. Этот сервер отличается выключенными модами - все в одинаковых условиях!\n",
-        "WelcomeEn": "Welcome to our server, where perks are like special spices in the world of competitiveness. Here, you'll savor a unique experience, as if playing chess, but with rifles and grenades instead. This server stands out with disabled mods - everyone is on an equal playing field!",
-        "FeaturesRu": "NoAddons, Перки, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "NoAddons, Perks, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "12",
-        "NAME": "Endurance|Weekend",
-        "IP": "178.22.51.56",
-        "PORT": "22812",
-        "WelcomeRu": "Добро пожаловать на наш выходной сервер тут сражения столь напряженные, что даже самый хладнокровный игрок начнет потеть от удовольствия. Наши перки не просто модификаторы, а волшебные зелья для настоящих виртуозов стрельбы. И помни, у нас нет читов — только скилл и хорошая реакция.",
-        "WelcomeEn": "Welcome to our weekend server where battles are so intense that even the coolest player will break a sweat from pleasure. Our perks are not just modifiers; they are magical potions for true marksmanship virtuosos. And remember, we have no cheats—only skill and quick reflexes.",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "13",
-        "NAME": "Endurance|Rework",
-        "IP": "178.22.51.56",
-        "PORT": "22813",
-        "WelcomeRu": "Добро пожаловать на наш Rework сервер, где изменения не просто касаются геймплея, а словно вихрь перемен, в котором даже самые опытные игроки заблудятся в потоке обновлений. У нас не просто новые фичи, а настоящие сокровища гейм-мира, где каждый эвент — красочное путешествие по миру игровых изменений",
-        "WelcomeEn": "Welcome to our Rework server, where changes are not just about gameplay but more like a whirlwind of transformations, where even the most experienced players will get lost in the stream of updates. We don't just have new features; we offer real treasures of the gaming world, where each event is a colorful journey through the realm of gaming changes",
-        "FeaturesRu": "Т1 Rework, Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "T1 Rework, Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "20",
-        "NAME": "Endurance[EU] 1 Perk",
-        "IP": "87.236.146.235",
-        "PORT": "27015",
-        "WelcomeRu": "Приветствуем на Endurance Perks - где необычные Перки и Механики игры столь удивительны, что будто бы мы собрали их случайным образом, закрыв глаза и крутя барабан! Погрузитесь в новый опыт игры, полный неожиданных и захватывающих возможностей~Добро пожаловать на Endurance Perks - самый сумасшедший сервер с Перками и Механиками игры просто \"совершенство\"!  Если случаются лаги - не волнуйтесь, это просто часть Европейского опыта игры в Чехии!",
-        "WelcomeEn": "Welcome to Endurance Perks - where unusual game Perks and Mechanics are so astonishing that it's as if we gathered them randomly, closing our eyes and spinning the wheel! Immerse yourself in a new gaming experience, full of unexpected and thrilling possibilities.\n\nAlso, welcome to Endurance Perks - the craziest server with game Perks and Mechanics that are simply \"perfection\"! If you experience lags - don't worry, it's just part of the European gaming experience in Czech Republic!",
-        "FeaturesRu": "Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      },
-      {
-        "ID": "21",
-        "NAME": "Endurance[EU] Gravity",
-        "IP": "87.236.146.235",
-        "PORT": "27016",
-        "WelcomeRu": "Добро пожаловать на Endurance Gravity - самый сумасшедший сервер без гравитации но с Перками и Механиками игры, отточенными до \"совершенство\"!  Если случаются лаги - не волнуйтесь, это просто часть Европейского опыта игры в Чехии!",
-        "WelcomeEn": "Welcome to Endurance Gravity - the craziest server with zero gravity, but with perks and game mechanics honed to perfection! If you experience any lags, don't worry, it's just part of the European gaming experience in the Czech Republic!\n",
-        "FeaturesRu": "Гравитация, Перки, Endgame, Поинты, Ранги, множество Исправлений и Улучшений",
-        "FeaturesEn": "Gravity, Perks, Endgame, Points, Ranks, numerous Fixes, and Enhancements."
-      }
-    ]
-  }
+	{
+		"type": "header",
+		"version": "5.2.1",
+		"comment": "Export to JSON plugin for PHPMyAdmin"
+	},
+	{
+		"type": "database",
+		"name": "vortex"
+	},
+	{
+		"type": "table",
+		"name": "ServersInfo",
+		"database": "vortex",
+		"data": [
+			{
+				"ID": "1",
+				"MODE": "perks",
+				"NAME": "Vortex 1 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27111"
+			},
+			{
+				"ID": "2",
+				"MODE": "perks",
+				"NAME": "Vortex 2 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27122"
+			},
+			{
+				"ID": "3",
+				"MODE": "perks",
+				"NAME": "Vortex 3 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27122"
+			},
+			{
+				"ID": "4",
+				"MODE": "perks",
+				"NAME": "Vortex 4 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27144"
+			},
+			{
+				"ID": "5",
+				"MODE": "perks",
+				"NAME": "Vortex | ELITE",
+				"IP": "91.219.148.93",
+				"PORT": "27155"
+			},
+			{
+				"ID": "6",
+				"MODE": "coop",
+				"NAME": "Vortex | COOP",
+				"IP": "91.219.148.93",
+				"PORT": "27166"
+			},
+			{
+				"ID": "test",
+				"MODE": "perks",
+				"NAME": "Vortex | TEST",
+				"IP": "***",
+				"PORT": "***"
+			},
+			{
+				"ID": "am1",
+				"MODE": "perks",
+				"NAME": "Vortex | Amsterdam 1",
+				"IP": "94.241.172.248",
+				"PORT": "27211"
+			},
+			{
+				"ID": "am2",
+				"MODE": "perks",
+				"NAME": "Vortex | Amsterdam 2",
+				"IP": "94.241.172.248",
+				"PORT": "27222"
+			},
+			{
+				"ID": "cl1",
+				"MODE": "classic",
+				"NAME": "Vortex | Classic 1",
+				"IP": "185.130.251.131",
+				"PORT": "28111"
+			},
+			{
+				"ID": "cl2",
+				"MODE": "classic",
+				"NAME": "Vortex | Classic 2",
+				"IP": "185.130.251.131",
+				"PORT": "28122"
+			}
+		]
+	}
 ]

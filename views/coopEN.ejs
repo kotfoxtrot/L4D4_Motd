@@ -1,0 +1,228 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Vortex Left4Dead2 Motd</title>
+
+	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
+	<script src="/files/jquery-1.9.1.min.js"></script>
+	<script src="/files/jquery-tabs.js"></script>
+
+	<style>
+		@font-face {
+			font-family: "Verdana";
+			src: url("/files/Verdana.ttf") format("woff2");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			zoom: 1.1;
+			margin: 40px auto;
+			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: 100%;
+			background-attachment: fixed;
+			background-color: black;
+			font-family: "Verdana", Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			color: white;
+			width: 600px;
+			min-width: 800px;
+			width: 95%;
+			overflow-y: scroll;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			// Add a click handler only for links with the "redirect-link" class
+			$(".redirect-link").click(function (e) {
+				e.preventDefault(); // Prevent the default link behavior (navigation)
+
+				// Get the value of the href attribute of the clicked link
+				const targetUrl = $(this).attr("href");
+
+				// Redirect to the target URL
+				window.location.href = targetUrl;
+			});
+
+			// Initialize the tab plugin
+			$("ul.tabs").tabs("div.panes > div");
+		});
+	</script>
+
+</head>
+
+<body>
+<ul class="tabs">
+	<li><a href="" class="current">Main</a></li>
+	<li><a href="" class="">Privileges</a></li>
+	<li>
+		<a href="/motd/<%= server.ID %>/ru" class="redirect-link">RU версия ➤</a>
+	</li>
+</ul>
+
+<!-- tab "panes" -->
+<div class="panes">
+	<!-- EN -->
+	<div style="display: block">
+		<p align="center" class="flag-russia">
+			<strong> <%= server.NAME %> </strong>
+		</p>
+		<p align="center" class="flag-russia">
+			<%= server.IP %>:<%= server.PORT %>
+		</p>
+		<br/>
+		<p>
+			Welcome to Vortex COOP with custom maps!
+		</p>
+		<p>
+			The main focus of the server is special abilities, perks. Why not play COOP with them?
+		</p>
+		<p>
+			You can find out about all special maps from the Steam group, just enter !steam to the chat <3
+		</p>
+		<p>
+		   [ <strong class="gg">Monitoring and bans</strong> vortexl4d4.ru | <strong class="gg">Community</strong> !discord | <strong class="gg">Steam group</strong> !steam ]
+		</p>
+		<br/>
+		<p align="left" class="flag-russia">Server Commands:</p>
+		<table id="cmd" cellspacing="1" cellpadding="1">
+			<tbody>
+			<tr>
+				<td class="chat">!perks</td>
+				<td>Choose perks (special abilities)</td>
+			</tr>
+			<tr>
+				<td class="chat">!w or !shop</td>
+				<td>Purchase weapons with coins</td>
+			</tr>
+			<tr>
+				<td class="chat">!coins</td>
+				<td>Check your current balance</td>
+			</tr>
+			<tr>
+				<td class="chat">!tip</td>
+				<td>Share coins with another player</td>
+			</tr>
+			<tr>
+				<td class="gg">!sp</td>
+				<td>Sound effects pack for Premium/Legend</td>
+			</tr>
+			<tr>
+				<td class="gg">!hat</td>
+				<td>Collection of hats for Legend</strong></td>
+			</tr>
+			<tr>
+				<td class="chat">!kill</td>
+				<td>To choose the easy way out</td>
+			</tr>
+			<tr>
+				<td class="chat">!votemap</td>
+				<td>Choose the next campaign</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- VIP/PREM -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			<strong class="gg">Support the Server on Boosty!</strong>
+		</p>
+		<p>
+			If you've enjoyed the project, you can support its further development on the Boosty platform!
+		</p>
+		<p>
+			https://boosty.to/vortexl4d2
+		</p>
+		<br/>
+		<p>
+			You can also purchase in-game privileges there, which provide the following perks:
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+		<table id="cmd" cellspacing="1" cellpadding="4">
+			<tbody>
+			<tr>
+				<td class="chat">Benefits</td>
+				<td>VIP</td>
+				<td>PREMIUM</td>
+				<td>LEGENDARY</td>
+			</tr>
+			<tr>
+				<td>Ghost Flight</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Kick Protection:</td>
+				<td align="center">LVL-1</td>
+				<td align="center">LVL-2</td>
+				<td align="center">LVL-3</td>
+			</tr>
+			<tr>
+				<td>Coins each round</td>
+				<td align="center">500</td>
+				<td align="center">1000</td>
+				<td align="center">1500</td>
+			</tr>
+			<tr>
+				<td>Vortex coins booster</td>
+				<td align="center">+25%</td>
+				<td align="center">+50%</td>
+				<td align="center">+100%</td>
+			</tr>
+			<tr>
+				<td>Visual indication in chat</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Access to meme soundpad</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Perks saved when leaving the game</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Access to wear hats</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Ability to add a track to Jukebox</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>New features (in future)</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- @end .panes -->
+<script>
+	$(function () {
+		$("ul.tabs").tabs("div.panes > div");
+	});
+</script>
+</body>
+</html>

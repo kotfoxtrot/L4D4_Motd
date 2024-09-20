@@ -36,11 +36,12 @@ app.get("/motd/:server/:language", async (req, res) => {
 
     const serverInfo = findServerById(jsonData[2].data, req.params.server) || {
       "ID": "0",
-      "NAME": "Endurance Server",
+      "NAME": "Vortex Perkmod",
       "IP": "Not info",
-      "PORT": "27015",
-      "WelcomeRu": "Добро пожаловать на Endurance Server!",
-      "WelcomeEn": "Welcome to Endurance Server!"
+      "PORT": "27111",
+      "WelcomeRu": "Добро пожаловать на Vortex!",
+      "WelcomeEn": "Welcome to Vortex!",
+      "MODE": "perks"
     };
 
     const renderParams = {
@@ -50,7 +51,22 @@ app.get("/motd/:server/:language", async (req, res) => {
       randomImage: Math.floor(Math.random() * 21) + 1, // random picture from 1 to 21
     };
 
-    const template = req.params.language === "en" ? "motdEN" : "motdRU";
+    // Determine the template based on MODE and language
+    let template;
+    const mode = serverInfo.MODE || "perks"; // Default to perks if MODE not specified
+
+    if (req.params.language === "en") {
+      if (mode === "classic") template = "classicEN";
+      else if (mode === "coop") template = "coopEN";
+      else if (mode === "t1hard") template = "t1hardEN";
+      else template = "perksEN";
+    } else {
+      if (mode === "classic") template = "classicRU";
+      else if (mode === "coop") template = "coopRU";
+      else if (mode === "t1hard") template = "t1hardRU";
+      else template = "perksRU";
+    }
+
     res.render(template, renderParams);
   } catch (err) {
     console.error("Error processing the route:", err);
