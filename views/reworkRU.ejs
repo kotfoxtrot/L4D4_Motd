@@ -1,0 +1,287 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Vortex Left4Dead2 Motd</title>
+
+	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
+	<script src="/files/jquery-1.9.1.min.js"></script>
+	<script src="/files/jquery-tabs.js"></script>
+
+	<style>
+		@font-face {
+			font-family: "Verdana";
+			src: url("/files/Verdana.ttf") format("woff2");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			zoom: 1.1;
+			margin: 40px auto;
+			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: 100%;
+			background-attachment: fixed;
+			background-color: black;
+			font-family: "Verdana", Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			color: white;
+			width: 600px;
+			min-width: 800px;
+			width: 95%;
+			overflow-y: scroll;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			// Добавьте обработчик клика только для ссылки с классом "redirect-link"
+			$(".redirect-link").click(function (e) {
+				e.preventDefault(); // Предотвратите стандартное поведение ссылки (переход по ссылке)
+
+				// Получите значение атрибута href кликнутой ссылки
+				const targetUrl = $(this).attr("href");
+
+				// Перенаправить на целевой URL
+				window.location.href = targetUrl;
+			});
+
+			// Инициализируйте плагин вкладок
+			$("ul.tabs").tabs("div.panes > div");
+		});
+	</script>
+</head>
+
+<body>
+<ul class="tabs">
+	<li><a href="" class="current">Главная</a></li>
+	<li><a href="" class="">Информация</a></li>
+	<li><a href="" class="">Привилегии</a></li>
+	<li>
+		<a href="/motd/<%= server.ID %>/en" class="redirect-link">ENG version ➤</a>
+	</li>
+</ul>
+
+<!-- tab "panes" -->
+<div class="panes">
+	<!-- RU -->
+	<div style="display: block">
+		<p align="center" class="flag-russia">
+			<strong> <%= server.NAME %> </strong>
+		</p>
+		<p align="center" class="flag-russia">
+			<%= server.IP %>:<%= server.PORT %>
+		</p>
+		<br/>
+		<p>
+			Устал от непонятных новых механик? Добро пожаловать на Vortex Classic!
+		</p>
+		<p>
+			Классический геймплей, но с отличной оптимизацией и хорошим пингом!
+		</p>
+		<p>
+			Об особенностях можно почитать во вкладке "Информация", приятной игры <3
+		</p>
+		<p>
+		   [ <strong class="gg">Сайт</strong> vortexl4d4.ru | <strong class="gg">Сообщество</strong> !discord | <strong class="gg">Steam-группа</strong> !steam ]
+		</p>
+
+		<!-- 		
+		<p>
+			[ <a href="http://vortexl4d4.ru/" target="_blank"><strong class="gg">Мониторинг и баны</strong></a> 
+			| <a href="http://discord.gg/MXHPFHwRm5" target="_blank"><strong class="gg">Сообщество Discord</strong></a> 
+			| <a href="http://steamcommunity.com/groups/vortexl4d4" target="_blank"><strong class="gg">Steam-группа</strong></a> ]
+		 </p> 
+		 -->
+		
+		<br/>
+		<p align="left" class="flag-russia">Команды сервера:</p>
+		<table id="cmd" cellspacing="1" cellpadding="1">
+			<tbody>
+			<tr>
+				<td class="chat">!w</td>
+				<td>Покупка оружия за коины</td>
+			</tr>
+			<tr>
+				<td class="chat">!coins</td>
+				<td>Текущий баланс</td>
+			</tr>
+			<tr>
+				<td class="chat">!tip</td>
+				<td>Поделиться коинами с игроком</td>
+			</tr>
+			<tr>
+				<td class="chat">!pass</td>
+				<td>Передать танка другому игроку</td>
+			</tr>
+			<tr>
+				<td class="chat">!js</td>
+				<td>Перейти за выживших</td>
+			</tr>
+			<tr>
+				<td class="chat">!ji</td>
+				<td>Перейти за зараженных</td>
+			</tr>
+			<tr>
+				<td class="chat">!afk</td>
+				<td>Перейти за наблюдателей</td>
+			</tr>
+			<tr>
+				<td class="gg">Кнопка R</td>
+				<td>Полёт призраком для VIP/Premium/Legend</td>
+			</tr>
+			<tr>
+				<td class="gg">!sp</td>
+				<td>Набор звуковых эффектов для Premium/Legend</strong></td>
+			</tr>
+			<tr></tr>
+				<td class="gg">!hat</td>
+				<td>Коллекция шапок для Legend</strong></td>
+			</tr>
+			<tr>
+				<td class="chat">!kill</td>
+				<td>Чтобы выбрать лёгкий путь</td>
+			</tr>
+			<tr>
+				<td class="chat">!votemap</td>
+				<td>Выбор следующей кампании</td>
+			</tr>
+			</tbody>
+		</table>
+		<p>
+			На сервере действует особая система рейтинга, которая определяет
+			лучшего выжившего и зараженного раунда!
+		</p>
+	</div>
+	<!-- F.A.Q. -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			Основная информация
+		</p>
+		<h3><strong class="gg">Динамичные карты</strong></h3>
+		<p>
+			Каждая карта имеет около-рандомную генерацию пути, чтобы было не скучно :D
+		</p>
+		<br/>
+		<h3><strong class="gg">Смена особых заражённых</strong></h3>
+		<p>
+			Чтобы было удобнее играть, ты можешь менять класс заразы, нажимая ПКМ
+		</p>
+		<p>
+			Однако, одних и тех же персонажей каждый выбрать нельзя, нужно будет подождать!
+		</p>
+		<br/>
+		<h3><strong class="gg">Магазин оружия</strong></h3>
+		<p>
+			Оружие можно купить за Коины которые дают за Хорошую игру!
+		</p>
+		<p></p>
+			Тем не менее, спавн оружия не уменьшен, можешь найти его сам на карте...
+		</p>
+		<br/>
+		<h3><strong class="gg">Soundpad и Jukebox</strong></h3>
+		<p>
+			Если слышишь странные звуки или музыку - это бустеры балуются xD
+		</p>
+		<p>
+			На нашем сервере можно включать музыку в убежище и использовать специальные мем-звуки.
+		</p>
+	</div>
+
+	<!-- VIP/PREM -->
+	<div style="display: none">
+		<p align="center" class="flag-russia">
+			<strong class="gg">Поддержка сервера на Boosty!</strong>
+		</p>
+		<p>
+			Если понравился проект, то можешь поддержать его развитие на платформе Boosty!
+		</p>
+		<p>
+			А ещё можно купить там привилегии! На сервере Classic это:
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+		<table id="cmd" cellspacing="1" cellpadding="4">
+			<tbody>
+			<tr>
+				<td class="chat">Преимущества</td>
+				<td>VIP</td>
+				<td>PREMIUM</td>
+				<td>LEGENDARY</td>
+			</tr>
+			<tr>
+				<td>Полёт призраком</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Защита от кика:</td>
+				<td align="center">LVL-1</td>
+				<td align="center">LVL-2</td>
+				<td align="center">LVL-3</td>
+			</tr>
+			<tr>
+				<td>Коины каждого раунда</td>
+				<td align="center">500</td>
+				<td align="center">1000</td>
+				<td align="center">1500</td>
+			</tr>
+			<tr>
+				<td>Бустер Vortex коинов</td>
+				<td align="center">+25%</td>
+				<td align="center">+50%</td>
+				<td align="center">+100%</td>
+			</tr>
+			<tr>
+				<td>Визуальное обозначение в чате</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Доступ к мемному саундпаду</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Сохранение перков при выходе из игры</td>
+				<td></td>
+				<td align="center">✔</td>
+				<td align="center">✔</td>
+			</tr>
+			<tr></tr>
+				<td>Возможность носит шапки</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Возможность добавить трек в Jukebox</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			<tr>
+				<td>Новые возможности (в разработке)</td>
+				<td></td>
+				<td></td>
+				<td align="center">✔</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- @end .panes -->
+<script>
+	$(function () {
+		$("ul.tabs").tabs("div.panes > div");
+	});
+</script>
+</body>
+</html>

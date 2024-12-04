@@ -14,6 +14,13 @@
 		"database": "vortex",
 		"data": [
 			{
+				"ID": "0",
+				"MODE": "perks",
+				"NAME": "Vortex Perks Help",
+				"IP": "",
+				"PORT": ""
+			},
+			{
 				"ID": "1",
 				"MODE": "perks",
 				"NAME": "Vortex 1 | Perks",
@@ -44,16 +51,44 @@
 			{
 				"ID": "5",
 				"MODE": "perks",
-				"NAME": "Vortex | ELITE",
+				"NAME": "Vortex 5 | Perks",
 				"IP": "91.219.148.93",
 				"PORT": "27155"
 			},
 			{
 				"ID": "6",
-				"MODE": "coop",
-				"NAME": "Vortex | COOP",
+				"MODE": "perks",
+				"NAME": "Vortex 6 | Perks",
 				"IP": "91.219.148.93",
 				"PORT": "27166"
+			},
+			{
+				"ID": "cp1",
+				"MODE": "coop",
+				"NAME": "Vortex | COOP 1",
+				"IP": "185.130.251.59",
+				"PORT": "29111"
+			},
+			{
+				"ID": "cp2",
+				"MODE": "coop",
+				"NAME": "Vortex | COOP 2",
+				"IP": "185.130.251.59",
+				"PORT": "29222"
+			},
+			{
+				"ID": "cp3",
+				"MODE": "coop",
+				"NAME": "Vortex | COOP 3",
+				"IP": "185.130.251.59",
+				"PORT": "29333"
+			},
+			{
+				"ID": "cp4",
+				"MODE": "coop",
+				"NAME": "Vortex | COOP 4",
+				"IP": "185.130.251.59",
+				"PORT": "29444"
 			},
 			{
 				"ID": "test",
@@ -74,35 +109,21 @@
 				"MODE": "perks",
 				"NAME": "Vortex | Amsterdam 2",
 				"IP": "94.241.172.248",
-				"PORT": "27222"
-			},
-			{
-				"ID": "cl1",
-				"MODE": "classic",
-				"NAME": "Vortex | Classic 1",
-				"IP": "185.130.251.131",
 				"PORT": "28111"
 			},
 			{
-				"ID": "cl2",
-				"MODE": "classic",
-				"NAME": "Vortex | Classic 2",
-				"IP": "185.130.251.131",
-				"PORT": "28122"
+				"ID": "hk1",
+				"MODE": "perks",
+				"NAME": "Vortex | Hong Kong 1",
+				"IP": "103.69.128.14",
+				"PORT": "28111"
 			},
 			{
-				"ID": "th1",
-				"MODE": "t1hard",
-				"NAME": "Vortex | T1 Hard [1]",
-				"IP": "185.130.251.131",
-				"PORT": "28211"
-			},
-			{
-				"ID": "th2",
-				"MODE": "t1hard",
-				"NAME": "Vortex | T1 Hard [2]",
-				"IP": "185.130.251.131",
-				"PORT": "28222"
+				"ID": "hk2",
+				"MODE": "perks",
+				"NAME": "Vortex | Hong Kong 2",
+				"IP": "103.69.128.14",
+				"PORT": "27222"
 			}
 		]
 	}
