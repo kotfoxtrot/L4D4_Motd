@@ -14,11 +14,11 @@
 		"database": "vortex",
 		"data": [
 			{
-				"ID": "0",
+				"ID": "help",
 				"MODE": "perks",
-				"NAME": "Vortex Perks Help",
-				"IP": "",
-				"PORT": ""
+				"NAME": "Vortex Perks",
+				"IP": "Help",
+				"PORT": "Info"
 			},
 			{
 				"ID": "1",
@@ -61,6 +61,20 @@
 				"NAME": "Vortex 6 | Perks",
 				"IP": "91.219.148.93",
 				"PORT": "27166"
+			},
+			{
+				"ID": "7",
+				"MODE": "perks",
+				"NAME": "Vortex 7 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27177"
+			},
+			{
+				"ID": "8",
+				"MODE": "perks",
+				"NAME": "Vortex 8 | Perks",
+				"IP": "91.219.148.93",
+				"PORT": "27188"
 			},
 			{
 				"ID": "cp1",
