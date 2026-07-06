@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Vortex Left4Dead2 Motd</title>
+
+	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
+	<script src="/files/jquery-1.9.1.min.js"></script>
+	<script src="/files/jquery-tabs.js"></script>
+
+	<style>
+		@font-face {
+			font-family: "Verdana";
+			src: url("/files/Verdana.ttf") format("woff2");
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			zoom: 1.1;
+			margin: 40px auto;
+			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			background-position: 100%;
+			background-attachment: fixed;
+			background-color: black;
+			font-family: "Verdana", Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			color: white;
+			width: 600px;
+			min-width: 800px;
+			width: 95%;
+			overflow-y: scroll;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			$(".redirect-link").click(function (e) {
+				e.preventDefault();
+				window.location.href = $(this).attr("href");
+			});
+			$("ul.tabs").tabs("div.panes > div");
+		});
+	</script>
+</head>
+
+<body>
+<%- include("mode/" + mode + "." + lang + ".ejs") %>
+</body>
+</html>

@@ -2,7 +2,9 @@
 
 ## Features of this project
 
-- Retrieving the description of each server by ID
+- Server data (name, ip, port) is passed directly in the URL, no database or config file
+
+- Two modes: `versus` and `coop`, two languages: `ru` and `en`
 
 - Expanding the MOTD window based on screen size
 
@@ -10,12 +12,18 @@
 
 - The background features 21 random images for each season
 
-- To modify server descriptions, use the `ServersInfo.json` file
-
 - Docker file for deployment as a microservice behind a reverse proxy
-```js
-http://youdomain.com/motd/:id
+
 ```
+http://youdomain.com/motd/:mode/:lang?name=...&ip=...&port=...
+```
+
+Example:
+
+```
+http://youdomain.com/motd/versus/ru?name=Vortex%201%20%7C%20Versus&ip=178.22.49.218&port=38001
+```
+
 I recommend using subdomains motd.youdomain.com
 
 #
@@ -26,7 +34,9 @@ I recommend using subdomains motd.youdomain.com
 
 ## Возможности данного проекта
 
-- Получение описание каждого сервера по ID
+- Данные сервера (название, ip, порт) передаются прямо в URL, без базы и файлов конфигурации
+
+- Два режима: `versus` и `coop`, два языка: `ru` и `en`
 
 - Растягивание motd окна в зависимости от размера экрана
 
@@ -34,10 +44,16 @@ I recommend using subdomains motd.youdomain.com
 
 - Задний фон имеет 21 рандомную картинку на каждый сезон
 
-- Для изменения описание серверов используйте файл `ServersInfo.json`
-
 - Файл Docker для поднятия как микросервис за обратным прокси
-```js
-http://твойдомен.com/motd/:id
+
 ```
+http://твойдомен.com/motd/:mode/:lang?name=...&ip=...&port=...
+```
+
+Пример:
+
+```
+http://твойдомен.com/motd/versus/ru?name=Vortex%201%20%7C%20Versus&ip=178.22.49.218&port=38001
+```
+
 Рекомендую использовать поддомен motd.твойдомен.com

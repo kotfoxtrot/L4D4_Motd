@@ -1,79 +1,19 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<title>Vortex Left4Dead2 Motd</title>
-
-	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
-	<script src="/files/jquery-1.9.1.min.js"></script>
-	<script src="/files/jquery-tabs.js"></script>
-
-	<style>
-		@font-face {
-			font-family: "Verdana";
-			src: url("/files/Verdana.ttf") format("woff2");
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		body {
-			zoom: 1.1;
-			margin: 40px auto;
-			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-			background-position: 100%;
-			background-attachment: fixed;
-			background-color: black;
-			font-family: "Verdana", Arial, Helvetica, sans-serif;
-			font-size: 18px;
-			color: white;
-			width: 600px;
-			min-width: 800px;
-			width: 95%;
-			overflow-y: scroll;
-		}
-	</style>
-
-	<script>
-		$(function () {
-			// Добавьте обработчик клика только для ссылки с классом "redirect-link"
-			$(".redirect-link").click(function (e) {
-				e.preventDefault(); // Предотвратите стандартное поведение ссылки (переход по ссылке)
-
-				// Получите значение атрибута href кликнутой ссылки
-				const targetUrl = $(this).attr("href");
-
-				// Перенаправить на целевой URL
-				window.location.href = targetUrl;
-			});
-
-			// Инициализируйте плагин вкладок
-			$("ul.tabs").tabs("div.panes > div");
-		});
-	</script>
-</head>
-
-<body>
 <ul class="tabs">
 	<li><a href="" class="current">Главная</a></li>
 	<li><a href="" class="">Информация</a></li>
 	<li><a href="" class="">Привилегии</a></li>
 	<li>
-		<a href="/motd/<%= server.ID %>/en" class="redirect-link">ENG version ➤</a>
+		<a href="/motd/<%= mode %>/en?name=<%= encodeURIComponent(name) %>&ip=<%= encodeURIComponent(ip) %>&port=<%= encodeURIComponent(port) %>" class="redirect-link">ENG version ➤</a>
 	</li>
 </ul>
 
-<!-- tab "panes" -->
 <div class="panes">
-	<!-- RU -->
 	<div style="display: block">
 		<p align="center" class="flag-russia">
-			<strong> <%= server.NAME %> </strong>
+			<strong> <%= name %> </strong>
 		</p>
 		<p align="center" class="flag-russia">
-			<%= server.IP %>:<%= server.PORT %>
+			<%= ip %>:<%= port %>
 		</p>
 		<br/>
 		<p>
@@ -86,17 +26,8 @@
 			Мы создали Vortex, чтобы подарить незабываемые эмоции и новый взгляд на любимую игру себе и вам <3
 		</p>
 		<p>
-		   [ <strong class="gg">Сайт</strong> vortexl4d4.ru | <strong class="gg">Сообщество</strong> !discord | <strong class="gg">Steam-группа</strong> !steam ]
+		   [ <strong class="gg">Сайт</strong> vortex.l4d4.com | <strong class="gg">Сообщество</strong> !discord | <strong class="gg">Steam-группа</strong> !steam ]
 		</p>
-
-		<!-- 		
-		<p>
-			[ <a href="http://vortexl4d4.ru/" target="_blank"><strong class="gg">Мониторинг и баны</strong></a> 
-			| <a href="http://discord.gg/MXHPFHwRm5" target="_blank"><strong class="gg">Сообщество Discord</strong></a> 
-			| <a href="http://steamcommunity.com/groups/vortexl4d4" target="_blank"><strong class="gg">Steam-группа</strong></a> ]
-		 </p> 
-		 -->
-		
 		<br/>
 		<p align="left" class="flag-russia">Команды сервера:</p>
 		<table id="cmd" cellspacing="1" cellpadding="1">
@@ -139,11 +70,11 @@
 			</tr>
 			<tr>
 				<td class="gg">!sp</td>
-				<td>Набор звуковых эффектов для Premium/Legend</strong></td>
+				<td>Набор звуковых эффектов для Premium/Legend</td>
 			</tr>
-			<tr></tr>
+			<tr>
 				<td class="gg">!hat</td>
-				<td>Коллекция шапок для Legend</strong></td>
+				<td>Коллекция шапок для Legend</td>
 			</tr>
 			<tr>
 				<td class="chat">!kill</td>
@@ -160,7 +91,6 @@
 			лучшего выжившего и зараженного раунда!
 		</p>
 	</div>
-	<!-- F.A.Q. -->
 	<div style="display: none">
 		<p align="center" class="flag-russia">
 			Основная информация
@@ -219,7 +149,6 @@
 		</p>
 	</div>
 
-	<!-- VIP/PREM -->
 	<div style="display: none">
 		<p align="center" class="flag-russia">
 			<strong class="gg">Поддержка сервера на Boosty!</strong>
@@ -228,7 +157,7 @@
 			Если понравился проект, то можешь поддержать его развитие на платформе Boosty!
 		</p>
 		<p>
-			А ещё можно купить там привилегии! На сервере Perks это:
+			А ещё можно купить там привилегии! На сервере Versus это:
 		</p>
 		<br/>
 		<hr/>
@@ -283,8 +212,8 @@
 				<td align="center">✔</td>
 				<td align="center">✔</td>
 			</tr>
-			<tr></tr>
-				<td>Возможность носит шапки</td>
+			<tr>
+				<td>Возможность носить шапки</td>
 				<td></td>
 				<td></td>
 				<td align="center">✔</td>
@@ -305,11 +234,3 @@
 		</table>
 	</div>
 </div>
-<!-- @end .panes -->
-<script>
-	$(function () {
-		$("ul.tabs").tabs("div.panes > div");
-	});
-</script>
-</body>
-</html>

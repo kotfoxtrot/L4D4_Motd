@@ -10,9 +10,3 @@ services:
       - "3040:3040"
     volumes:
       - .:/app
-    networks:
-      - tunnel
-
-networks:
-  tunnel:
-    external: true

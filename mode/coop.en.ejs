@@ -1,79 +1,18 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<title>Vortex Left4Dead2 Motd</title>
-
-	<link rel="stylesheet" type="text/css" href="/files/style.css"/>
-	<script src="/files/jquery-1.9.1.min.js"></script>
-	<script src="/files/jquery-tabs.js"></script>
-
-	<style>
-		@font-face {
-			font-family: "Verdana";
-			src: url("/files/Verdana.ttf") format("woff2");
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		body {
-			zoom: 1.1;
-			margin: 40px auto;
-			background: url("/<%= season %>/<%= randomImage %>.jpg") no-repeat center top fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-			background-position: 100%;
-			background-attachment: fixed;
-			background-color: black;
-			font-family: "Verdana", Arial, Helvetica, sans-serif;
-			font-size: 18px;
-			color: white;
-			width: 600px;
-			min-width: 800px;
-			width: 95%;
-			overflow-y: scroll;
-		}
-	</style>
-
-	<script>
-		$(function () {
-			// Add a click handler only for links with the "redirect-link" class
-			$(".redirect-link").click(function (e) {
-				e.preventDefault(); // Prevent the default link behavior (navigation)
-
-				// Get the value of the href attribute of the clicked link
-				const targetUrl = $(this).attr("href");
-
-				// Redirect to the target URL
-				window.location.href = targetUrl;
-			});
-
-			// Initialize the tab plugin
-			$("ul.tabs").tabs("div.panes > div");
-		});
-	</script>
-
-</head>
-
-<body>
 <ul class="tabs">
 	<li><a href="" class="current">Main</a></li>
 	<li><a href="" class="">Privileges</a></li>
 	<li>
-		<a href="/motd/<%= server.ID %>/ru" class="redirect-link">RU версия ➤</a>
+		<a href="/motd/<%= mode %>/ru?name=<%= encodeURIComponent(name) %>&ip=<%= encodeURIComponent(ip) %>&port=<%= encodeURIComponent(port) %>" class="redirect-link">RU версия ➤</a>
 	</li>
 </ul>
 
-<!-- tab "panes" -->
 <div class="panes">
-	<!-- EN -->
 	<div style="display: block">
 		<p align="center" class="flag-russia">
-			<strong> <%= server.NAME %> </strong>
+			<strong> <%= name %> </strong>
 		</p>
 		<p align="center" class="flag-russia">
-			<%= server.IP %>:<%= server.PORT %>
+			<%= ip %>:<%= port %>
 		</p>
 		<br/>
 		<p>
@@ -86,7 +25,7 @@
 			You can find out about all special maps from the Steam group, just enter !steam to the chat <3
 		</p>
 		<p>
-		   [ <strong class="gg">Monitoring and bans</strong> vortexl4d4.ru | <strong class="gg">Community</strong> !discord | <strong class="gg">Steam group</strong> !steam ]
+		   [ <strong class="gg">Monitoring and bans</strong> vortex.l4d4.com | <strong class="gg">Community</strong> !discord | <strong class="gg">Steam group</strong> !steam ]
 		</p>
 		<br/>
 		<p align="left" class="flag-russia">Server Commands:</p>
@@ -114,7 +53,7 @@
 			</tr>
 			<tr>
 				<td class="gg">!hat</td>
-				<td>Collection of hats for Legend</strong></td>
+				<td>Collection of hats for Legend</td>
 			</tr>
 			<tr>
 				<td class="chat">!kill</td>
@@ -128,7 +67,6 @@
 		</table>
 	</div>
 
-	<!-- VIP/PREM -->
 	<div style="display: none">
 		<p align="center" class="flag-russia">
 			<strong class="gg">Support the Server on Boosty!</strong>
@@ -214,11 +152,3 @@
 		</table>
 	</div>
 </div>
-<!-- @end .panes -->
-<script>
-	$(function () {
-		$("ul.tabs").tabs("div.panes > div");
-	});
-</script>
-</body>
-</html>
